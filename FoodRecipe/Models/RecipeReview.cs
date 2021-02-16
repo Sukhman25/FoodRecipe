@@ -8,14 +8,14 @@ namespace FoodRecipes.Models
 {
     public class RecipeReview
     {
-        [Key]
+        [Key]                       //Primary key
         public int ReviewID { get; set; }
 
         [Required]
-        [StringLength(100)]
-        public string Name { get; set; }
+        [StringLength(100)]                 //Lenth used for string is 100
+        public string Name { get; set; }            //Name of string
 
-        [Required]
+        [Required]                                              //It is manadatory
         public int Rating { get; set; }
 
         [Required]
@@ -23,7 +23,7 @@ namespace FoodRecipes.Models
         public string ReviewText { get; set; }
 
         [Required]
-        public int RecipeID { get; set; }
+        public int RecipeID { get; set; }                       //Recipe Id is used
 
         public FoodRecipe FoodRecipe { get; set; }
 

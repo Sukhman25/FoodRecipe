@@ -8,12 +8,12 @@ namespace FoodRecipes.Models
 {
     public class FoodCategory
     {
-        [Key]
+        [Key]                          //Primary Key
         public int CategoryID { get; set; }
 
         [Required]
-        [StringLength(100)]
-        public string CategoryName { get; set; }
+        [StringLength(100)]                     //String length is 100
+        public string CategoryName { get; set; }                //Name of category
 
         public virtual ICollection<FoodRecipe> FoodRecipes { get; set; }
 
